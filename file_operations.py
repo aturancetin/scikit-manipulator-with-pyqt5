@@ -59,7 +59,7 @@ class FileOperations(QtWidgets.QWidget):
         dialogMenu = QtWidgets.QDialog()
         Image = stateManager.outputSource
         fileName = QtWidgets.QFileDialog.getSaveFileName(dialogMenu, "Save File",
-                                                         "/home/atc/Desktop/LabFinal",
+                                                         "",
                                                          "Images (*.png *.jpg)")
         Image.save(fileName[0])
 
@@ -70,7 +70,7 @@ class FileOperations(QtWidgets.QWidget):
         typeOfInput = stateManager.inputSource[-4:]
 
         fileName = QtWidgets.QFileDialog.getSaveFileName(dialogMenu, "Save File",
-                                                         "/home/atc/Desktop/LabFinal",
+                                                         "",
                                                          "Images (*.png *.jpg)")
         filePath = fileName[0]
         if typeOfInput == ".png":
