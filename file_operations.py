@@ -20,7 +20,7 @@ class FileOperations(QtWidgets.QWidget):
     def openSource(imageLabel, isImageExist, stateManager):
         dialogMenu = QtWidgets.QDialog()
         sourcePath, _ = QtWidgets.QFileDialog.getOpenFileName(dialogMenu,
-                                                              "Open Image", "/home/atc/Desktop/LabFinal", "Image (*.jpg *.png)")
+                                                              "Open Image", "", "Image (*.jpg *.png)")
         if sourcePath != '':
             imageLabel.setPixmap(QtGui.QPixmap(sourcePath))
             stateManager.importImage(sourcePath)
